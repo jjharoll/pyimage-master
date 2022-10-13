@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Upload new File</title>
+</head>
+<body>
+    <h1>Upload new File</h1>
+    
+    <form method=post enctype=multipart/form-data>
+      <input type=file name=file>
+      <input type=submit value=Upload>
+    </form>
+    {% if path %}
+        <img src="{{path}}" alt="">
+    {% endif %}
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <h3>Result:</h3>
+            <pre>{{ messages[0] }}</pre>
+        {% endif %}
+    {% endwith %}
+</body>
+</html>

@@ -1,0 +1,8 @@
+Click
+Flask
+itsdangerous
+Jinja2
+MarkupSafe
+PilloW
+pytesseract
+Werkzeug
